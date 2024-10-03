@@ -1,3 +1,11 @@
+# Statistical methods for the analysis of populations of directed graphs
+
+This contains the source code of the beta version of StatGraph, including all of the methods that were implemented for the directed code, which were used for the development of the simulations and plots in the paper 'Statistical methods for the analysis of populations of directed graphs'. This is a beta version. Please see the official StatGraph website in RCran for updated versions.
+
+## **This repository is NOT going to be updated**
+
+Thank you for visiting!
+
 # StatGraph
 
 Contains statistical methods to analyze graphs, such as graph parameter estimation, model selection based on the GIC (Graph Information Criterion), statistical tests to discriminate two or more populations of graphs (ANOGVA - Analysis of Graph Variability), correlation between graphs, and clustering of graphs. 
