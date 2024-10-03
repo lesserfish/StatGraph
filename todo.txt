@@ -1,0 +1,26 @@
+DONE:
+    anogva.R
+    graph.param.estimator.R
+    takahashi.test.R
+DONE-:
+    graph.model.selection.R
+    GIC.R
+TODO:
+    graph.entropy.R
+    graph.hclust.R
+    graph.kmeans.R
+    graph.mult.scaling.R
+IGNORE:
+    cerqueira.test.R
+    eigenvalue.probability.R
+    fraiman.test.R
+    get.spectral.density.R
+    ghoshdastidar.test.R
+    print.statGraph.R
+    sp.anogva.R
+    tang.test.R
+?:
+    graph.acf.R
+    graph.cem.R
+    graph.cor.test.R
+

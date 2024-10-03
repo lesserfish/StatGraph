@@ -1,0 +1,21 @@
+name: Ubuntu
+
+on:
+  push:
+    branches:
+        - '**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install apt dependencies
+      run: sudo apt update -y && sudo apt install -y r-base libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev r-cran-tinytex texlive texinfo texlive-fonts-extra curl libcurl4 libharfbuzz-dev libfribidi-dev libcurl4-openssl-dev libxml2-dev libssl-dev libfontconfig1-dev libglpk-dev
+    - name: Install R dependencies
+      run: sudo Rscript install_packages.r
+
+    - name: Build
+      working-directory: ${{github.workspace}}
+      run: sudo Rscript build.r
+
