@@ -58,9 +58,8 @@ run_plot <- function(model,
 }
 
 
-Cairo::CairoSVG(file = "out/param-estimator-2d.svg", width = 9, onefile = TRUE, bg = "transparent", pointsize = 12)
-par(mfrow = c(2, 3))
-layout(matrix(c(1, 3, 5, 2, 4, 6), nrow = 2, byrow = TRUE))
+Cairo::CairoSVG(file = "out/param-estimator-2d.svg", height = 9, onefile = TRUE, bg = "transparent", pointsize = 12)
+par(mfrow = c(3, 2))
 run_plot("ER", breaks= 10, main = "Erdős–Rényi - 600 nodes")
 run_plot("PA", breaks= 20, main = "Barabási–Albert - 600 nodes")
 run_plot("WS", breaks= 8, main = "Watts–Strogatz - 600 nodes")

@@ -7,7 +7,7 @@ run_plot <- function(model,
                      xlab = "Acceptance Threshold",
                      group_sizes = c(10, 30, 50, 70),
                      colors = c("red", "green", "blue", "cyan"),
-                     ltys = c(6, 3, 2, 1),
+                     ltys = c(1, 1, 1, 1),
                      size = 400,
                      x = seq(0, 1, 0.01),
                      h = "h0",
@@ -42,7 +42,7 @@ run_plot <- function(model,
       data <- c(data, part)
     }
     y <- sapply(x, function(y)(length(which(data < y)) / length(data)))
-    lines(x = x, y = y, col = colors[j], lwd=0.5, lty=ltys[j])
+    lines(x = x, y = y, col = colors[j], lwd=1.0, lty=ltys[j])
   }
   
   legend("bottomright",                      # Position of the legend
@@ -53,12 +53,12 @@ run_plot <- function(model,
          )
 }
 
-Cairo::CairoSVG(file = "out/permanogva.svg", height = 9, onefile = TRUE, bg = "transparent", pointsize = 12)
-par(mfrow = c(3, 2))
+Cairo::CairoSVG(file = "out/permanogva.svg", width = 9, onefile = TRUE, bg = "transparent", pointsize = 12)
+par(mfrow = c(2, 3))
 run_plot("ER", count=50, h = "h0", main = "Erdős–Rényi - H0") 
-run_plot("ER", count=50, h = "h1", main = "Erdős–Rényi - H1") 
 run_plot("PA", count=50, h = "h0", main = "Barabási–Albert - H0")
-run_plot("PA", count=50, h = "h1", main = "Barabási–Albert - H1")
 run_plot("WS", count=50, h = "h0", main = "Watts–Strogatz - H0")
+run_plot("ER", count=50, h = "h1", main = "Erdős–Rényi - H1") 
+run_plot("PA", count=50, h = "h1", main = "Barabási–Albert - H1")
 run_plot("WS", count=50, h = "h1", main = "Watts–Strogatz - H1")
 dev.off()

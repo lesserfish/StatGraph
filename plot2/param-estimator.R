@@ -43,20 +43,20 @@ run_plot <- function(model,
 }
 
 
-Cairo::CairoSVG(file = "out/param-estimator-all.svg", height = 20, width=14, onefile = TRUE, bg = "transparent", pointsize = 12)
-par(mfrow = c(4, 3))
+Cairo::CairoSVG(file = "out/param-estimator-all.svg", height = 14, width=20, onefile = TRUE, bg = "transparent", pointsize = 12)
+par(mfrow = c(3, 4))
 
 run_plot("ER", "100", main = "Erdős–Rényi - 100 nodes")
-run_plot("PA", "100", main = "Barabási–Albert - 100 nodes")
-run_plot("WS", "100", main = "Watts–Strogatz - 100 nodes")
 run_plot("ER", "300", main = "Erdős–Rényi - 300 nodes")
-run_plot("PA", "300", main = "Barabási–Albert - 300 nodes")
-run_plot("WS", "300", main = "Watts–Strogatz - 300 nodes")
 run_plot("ER", "500", main = "Erdős–Rényi - 500 nodes")
-run_plot("PA", "500", main = "Barabási–Albert - 500 nodes")
-run_plot("WS", "500", main = "Watts–Strogatz - 500 nodes")
 run_plot("ER", "800", main = "Erdős–Rényi - 800 nodes")
+run_plot("PA", "100", main = "Barabási–Albert - 100 nodes")
+run_plot("PA", "300", main = "Barabási–Albert - 300 nodes")
+run_plot("PA", "500", main = "Barabási–Albert - 500 nodes")
 run_plot("PA", "800", main = "Barabási–Albert - 800 nodes")
+run_plot("WS", "100", main = "Watts–Strogatz - 100 nodes")
+run_plot("WS", "300", main = "Watts–Strogatz - 300 nodes")
+run_plot("WS", "500", main = "Watts–Strogatz - 500 nodes")
 run_plot("WS", "800", main = "Watts–Strogatz - 800 nodes")
 
 dev.off()
