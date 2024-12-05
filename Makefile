@@ -1,6 +1,7 @@
 TARFILE := $(wildcard Code*.tar.gz)
 all:
 	tar -xf $(TARFILE)
+	tar -xf MacRun.tar.gz
 	mkdir -p plot/out
 	cd plot && Rscript param-estimator.R
 	cd plot && Rscript param-estimator-2d.R
@@ -13,6 +14,7 @@ all:
 
 pp:
 	tar -xf $(TARFILE)
+	tar -xf MacRun.tar.gz
 	mkdir -p plot2/out
 	cd plot2 && Rscript param-estimator.R
 	cd plot2 && Rscript param-estimator-2d.R
@@ -25,6 +27,7 @@ pp:
 
 clean:  
 	rm -rf Code
+	rm -rf MacRun
 	rm -f plot/out/*
 	rm -f plot2/out/*
 

@@ -24,9 +24,7 @@ run_plot <- function(model,
     color <- colors[j]
     data <- c()  
     for(i in seq(start, count)){
-      fp <- paste("../Code/", 
-                  model, "/", 
-                  size, "/", 
+      fp <- paste("../MacRun/Code/Permanogva/", 
                   "simulation.permanogva-", h, 
                   "-", model, 
                   "-", size,
